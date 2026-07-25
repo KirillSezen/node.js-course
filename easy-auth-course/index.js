@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const authRouter = require('./authRouter')
 const { setServers } = require('node:dns/promises')
 setServers(["1.1.1.1", "8.8.8.8"])
 
@@ -10,6 +11,7 @@ const DB_URL = process.env.DB_URL
 const app = express()
 
 app.use(express.json())
+app.use('/auth', authRouter)
 
 const start = async () => {
 	try {
