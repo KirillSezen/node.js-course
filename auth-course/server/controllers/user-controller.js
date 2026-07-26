@@ -1,25 +1,61 @@
 class UserController {
-	registration (req, res) {
+	async registration (req, res, next) {
+		try {
+
+		} catch (e) {
+			console.log(e)
+		}
+
 		res.send('ok')
 	}
 
-	login (req, res) {
+	async login (req, res, next) {
+		try {
+
+		} catch (e) {
+			console.log(e)
+		}
+
 		res.send('ok')
 	}
 
-	logout (req, res) {
+	async logout (req, res, next) {
+		try {
+
+		} catch (e) {
+			console.log(e)
+		}
+
 		res.send('ok')
 	}
 
-	activate (req, res) {
+	activate (req, res, next) {
+		try {
+
+		} catch (e) {
+			console.log(e)
+		}
+
 		res.send('ok')
 	}
 
-	refresh (req, res) {
+	refresh (req, res, next) {
+		try {
+
+		} catch (e) {
+			console.log(e)
+		}
+
 		res.send('ok')
 	}
 
-	getUsers (req, res) {
+	getUsers (req, res, next) {
+		try {
+
+		} catch (e) {
+			console.log(e)
+		}
+		
 		res.send('ok')
 	}
 }
