@@ -3,8 +3,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose')
 const router = require('./router/index')
-const { setServers } = require('node:dns/promises')
-setServers(["1.1.1.1", "8.8.8.8"])
+const errorMiddleware = require('./middleware/error-middleware')
 
 const PORT = process.env.PORT || 3000
 
@@ -14,6 +13,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
 app.use('/api', router)
+app.use(errorMiddleware)
 
 const start = async () => {
 	try {
